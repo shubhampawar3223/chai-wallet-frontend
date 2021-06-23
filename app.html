@@ -10,7 +10,8 @@
 
     <link rel="stylesheet" type="text/css" href="hourGlass.css">
     <link rel="stylesheet" type="text/css" href="tooltipC.css">
-
+<script src="balance.js"></script>  
+        
 
 
     <link rel="manifest" href="manifest.json">
@@ -41,7 +42,7 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
-        .child {}
+
 
         .child.textMes {
             margin: 30px 10px;
@@ -75,9 +76,7 @@
             }
         }
 
-        .item1 {
-            /* text-align: center; */
-        }
+
 
         .item1 div {
             margin: 20px 0;
@@ -379,7 +378,7 @@
 
     <script>
 
-        async function balance() {
+        async function balanceSelfHosted() {
 
             try {
                 const keyGenAPI = await fetch("https://api.chiawallet.store:32253/balanceN?fingerprintNo=" + localStorage.getItem("fingerprintNo"));
@@ -396,6 +395,23 @@
                 }
             }
             catch {
+                alert("Some Error in fetching balance. Contact admin@chiawallet.store and blame him")
+            }
+        }
+
+        async function balance()
+        {
+            try {
+                console.log("hello");
+                // import {balance3rdP} from './balance.js';
+
+                var balance = await balance3rdP(localStorage.getItem("XCH_address"))
+
+                document.querySelector("#XCHBalance").innerText = balance;
+
+            }
+            catch (err){
+                console.log(err);
                 alert("Some Error in fetching balance. Contact admin@chiawallet.store and blame him")
             }
         }
@@ -509,6 +525,8 @@
     </script> -->
 
     <script src="closeBtn.js"></script>
-</body>
+
+    
+    </body>
 
 </html>
