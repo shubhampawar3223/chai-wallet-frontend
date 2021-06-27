@@ -42,13 +42,15 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
-
+        .head{
+            font-size: 1.4rem;
+        } 
 
         .child.textMes {
             margin: 30px 10px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             padding: 15px;
-            background-color: white;
+            background-color: floralwhite;
         }
 
         button {
@@ -78,12 +80,17 @@
 
 
 
-        .item1 div {
+        /* .item1 div {
             margin: 20px 0;
+        } */
+ 
+        .item1{
+            font-size: 1.4rem;
+            margin-left: 23%;
         }
 
         .item2 {
-            /* margin: 30px; */
+            margin: 30px;
             display: flex;
             flex-wrap: wrap;
         }
@@ -92,6 +99,7 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             padding: 5% 3%;
             background-color: white;
+            border-radius: 10%;
         }
 
 
@@ -169,21 +177,21 @@
 
 <body>
     <div id="header" class="container">
-        <div class="child">
+        <div class="child head">
             <h3> Chia Wallet </h3>
         </div>
     </div>
 
 
     <div class="container" id="createAndRestore">
-        <div class="child options" style="margin-top: 30px;">
+        <div class="child options" style="margin-top: 20px;">
             <div class="item1">
-                You have two options.
+              You have two options.
             </div>
 
             <div class="item2" style="display:block">
-                <button id="createWallet">Create Wallet</button>
-                <button id="restoreWallet">Restore Wallet</button>
+                <button   id="createWallet">Create Wallet</button>
+                <button   id="restoreWallet">Restore Wallet</button>
             </div>
         </div>
     </div>
